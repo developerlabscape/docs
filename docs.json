@@ -1,7 +1,8 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "maple",
-  "name": "Mintlify",
+  "name": "LabEscape™",
+  "description": "Documentação completa do LabEscape™ - Plataforma de escape rooms e experiências imersivas. Guias, tutoriais e referências para desenvolvedores.",
   "colors": {
     "primary": "#0D9373",
     "light": "#55D799",
