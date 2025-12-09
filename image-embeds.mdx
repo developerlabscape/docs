@@ -1,0 +1,144 @@
+---
+title: 'Images and Embeds'
+description: 'Add image, video, and other HTML elements'
+icon: 'image'
+---
+
+<img
+  className="rounded-xl"
+  src="https://mintlify-assets.b-cdn.net/bigbend.jpg"
+/>
+
+## Image
+
+Images are the most common way to add visual content to your documentation.
+
+### Basics
+
+The [markdown syntax](https://www.markdownguide.org/basic-syntax/#images) lets you add images using the following code
+
+```mdx
+![title](/path/image.jpg)
+```
+<Tip>
+To make sure images are displayed correctly in production, add a forward slash to the image path (e.g. `/path/image.jpg`).
+</Tip>
+
+Note that the image file size must be less than 20MB. Otherwise, we recommend hosting on a CDN provider like [S3](https://aws.amazon.com/s3), [Cloudinary](https://cloudinary.com) or a similar service.
+
+### Embeds
+
+To get more customizability with images, you can also use embeds to add images.
+
+```html
+<img height="200" src="/path/image.jpg" />
+```
+
+### Disable Image Zoom
+
+To disable the default zoom on click for images, add the `noZoom` property to image embeds.
+
+```html
+<img height="200" noZoom src="/path/image.jpg" />
+```
+
+### Linking Images
+
+To link an image, for example to create a button on your docs, encompass the image in a link with the `noZoom` property. Images in `a` tags will automatically have a pointer cursor.
+
+```html
+<a href="https://mintlify.com" target="_blank">
+  <img height="200" noZoom src="/path/image.jpg" />
+</a>
+```
+
+### Dark Mode
+
+To use separate images for light and dark mode, use Tailwind CSS to hide and show images.
+
+```html
+<img className="block dark:hidden" src="/path/image-light.jpg" />
+<img className="hidden dark:block" src="/path/image-dark.jpg" />
+```
+
+### Related
+
+For more information, we recommend the following sections:
+
+<Card
+  title="Frame Component Reference"
+  icon="frame"
+  href="/components/frames"
+>
+  Read the reference for the Frame component
+</Card>
+
+## Videos
+
+<iframe
+  className="w-full aspect-video rounded-xl"
+  src="https://www.youtube.com/embed/4KzFe50RQkQ"
+  title="YouTube video player"
+  frameBorder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowFullScreen
+></iframe>
+
+<br />
+
+<Tip>
+
+Mintlify supports [HTML tags in Markdown](https://www.markdownguide.org/basic-syntax/#html). This is helpful if you prefer HTML tags to Markdown syntax, and lets you create documentation with infinite flexibility.
+
+</Tip>
+
+For YouTube videos use:
+
+```html
+<iframe
+  width="560"
+  height="315"
+  src="https://www.youtube.com/embed/4KzFe50RQkQ"
+  title="YouTube video player"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen
+></iframe>
+```
+
+For other videos, use:
+
+```html
+<video
+  controls
+  className="w-full aspect-video"
+  src="link-to-your-video.com"
+></video>
+```
+
+To autoplay the video, use:
+
+```html
+<video
+  autoPlay
+  muted
+  loop
+  playsInline
+  className="w-full aspect-video"
+  src="link-to-your-video.com"
+></video>
+```
+
+<Warning>
+Since Mintlify needs to adhere to the JSX syntax, double word attributes will need to 
+be written in camelCase such as `autoPlay` and `playsInline`.
+</Warning>
+
+## iFrames
+
+Loads another HTML page within the document.
+
+```html
+<iframe src="https://www.youtube.com/embed/4KzFe50RQkQ"> </iframe>
+```
+

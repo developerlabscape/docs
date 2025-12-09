@@ -1,0 +1,247 @@
+---
+title: "Mecânicas"
+description: ""
+icon: 'wrench'
+---
+
+## Mecânicas Básicas
+
+As mecânicas principais de Lab Escape são voltadas para a exploração e resolução de puzzles com lógica química. Abaixo estão as ações básicas disponíveis desde o início da jornada:
+Movimentação lateral (andar/correr): Toque nos botões direcionais.
+
+<ul>
+  <li>**Movimentação lateral (andar/correr):** Toque nos botões direcionais.</li>
+  <li>**Pulo/Escalada (físico ou improvisado):** Será implementado em pontos específicos com auxílio de plataformas ou objetos interativos.</li>
+  <li>**Interação contextual:** Um botão de "mão" aparece sobre elementos interativos.</li>
+  <li>**Inventário com reagentes e ferramentas:** Arrastar e combinar substâncias químicas.</li>
+  <li>**Feedback visual e sonoro:** Para indicar sucesso ou falha nas interações químicas.</li>
+</ul>   
+
+## Progressão de Jogo
+
+A progressão é **linear com ramificações estratégicas**. O jogador desbloqueia novas áreas ao resolver os puzzles químicos das anteriores, coletando ferramentas e reagentes.
+
+<ul>
+  <li>**Cada sala representa um desafio químico distinto.**</li>
+  <li>**Desbloqueios incrementais:** portas, passagens, plataformas ou sistemas são liberados após reações corretas.</li>
+  <li>**Ampliação de recursos:** Novos reagentes, ferramentas e desafios mais complexos são introduzidos conforme o jogador avança.</li>
+  <li>**Acesso progressivo entre prédios A > B > C**, com aumento gradual de tensão e complexidade.</li>
+</ul>   
+
+## Dificuldade Geral
+
+A progressão é **linear com ramificações estratégicas**. O jogador desbloqueia novas áreas ao resolver os puzzles químicos das anteriores, coletando ferramentas e reagentes.
+
+<ul>
+  <li>**Prédio A:** Mecânicas básicas com foco em neutralizações simples e montagem de pilhas galvânicas.</li>
+  <li>**Prédio B:** Introduz desafios com pressão, temperatura e manipulação de substâncias inflamáveis.</li>
+  <li>**Prédio C:** Exige combinação de múltiplos conhecimentos químicos, gerenciamento de riscos e criação de soluções completas com reagentes limitados.</li>
+</ul>   
+
+## Condições de Vitória
+
+O jogo termina com sucesso quando:
+
+<ul>
+  <li>O jogador chega ao heliporto no Prédio C;</li>
+  <li>Consegue ativar o painel de sinalização usando uma reação química correta;</li>
+  <li>Gera fumaça de cor distinta (permanganato + glicerina) para ser resgatado.</li>
+</ul> 
+
+Esse encerramento exige ter coletado e utilizado corretamente **todos os reagentes principais ao longo da jornada**, além de dominar o sistema de combinação química do jogo.
+
+## Inventário e Sistema de Reações
+
+### Inventário
+
+O inventário aparecerá quando o jogador tocar no ícone de uma mochila fixado na lateral da tela. Ao abrir, será exibida uma janela com slots organizados por, mostrando os reagentes coletados e as ferramentas disponíveis. Cada item terá ícones em pixel art e uma breve descrição ao ser selecionado. O sistema permitirá arrastar e combinar reagentes dentro dos slots, com feedback visual e sonoro ao realizar as reações.
+
+Contém reagentes químicos limitados, cada um com descrição detalhada de suas propriedades e funções (ex: ácido clorídrico — forte ácido, corrosivo).
+
+Ferramentas laboratoriais essenciais, como tubo de ensaio, pinça, funil e béquer, cada uma acompanhada de uma descrição clara sobre seu uso, funcionamento e em quais situações do jogo podem ser aplicadas (ex: pinça para manipular objetos quentes ou perigosos; funil para transferência precisa de líquidos).
+
+Slot dedicado para misturas temporárias, onde o jogador combina reagentes para criar compostos novos, que podem ser usados imediatamente ou guardados para puzzles futuros.
+
+
+### Sistema de Reações
+
+<ul>
+  <li>**O quê:** O sistema de reações simula a combinação de reagentes e misturas.</li>
+  <li>**Quem:** As reações são realizadas pelo jogador.</li>
+  <li>**Quando:** Ocorrem no momento em que o jogador arrasta e combina reagentes dentro dos slots do inventário.</li>
+  <li>**Onde:** São visualizadas e acontecem dentro da interface do inventário.</li>
+  <li>**Por quê:** Para permitir ao jogador criar novos compostos, resolver puzzles e avançar nos desafios do jogo, baseando-se em tags químicas que influenciam o comportamento dos itens (ácido, base, inflamável, solúvel, metálico, oxidante, redutor), determinando compatibilidade e resultados.</li>
+</ul> 
+
+As reações são simuladas com efeitos visuais dinâmicos (emissão de cor, vapores, pequenas faíscas) e feedback visual e sonoro, indicando sucesso ou falha da combinação.
+
+## Interface e Interação
+
+### HUD
+ 
+<ul>
+  <li>Ícones pequenos, sem poluição visual</li>
+  <li>Slot de reagentes com destaque ativo</li>
+  <li>Barra de estrutura do ambiente (para indicar colapsos)</li>
+</ul> 
+
+### Menus
+
+<ul>
+  <li>Início, opções, créditos</li>
+  <li>Menu de pausa acessível com dois toques ou botão físico</li>
+</ul>
+
+### Controles (Android)
+
+<ul>
+    <li>Início, opções, créditos</li>
+    <li>Arrastar para combinar reagentes</li>
+    <li>Botão flutuante para acessar inventário</li>
+</ul>
+
+## Especificações detalhadas
+
+### HUD
+
+O sistema de controle contará com dois botões de setas direcionais, posicionados na lateral inferior da tela. Esses botões terão o formato de pequenas setas (setinhas) apontando para a esquerda e para a direita, permitindo ao jogador movimentar o personagem horizontalmente.
+
+<ul>
+    <li>**Posição padrão:** Canto inferior **esquerdo** da tela.</li>
+    <li>**Modo para canhotos:** Haverá uma opção nas configurações que permitirá alternar a posição desses botões para o canto inferior **direito**, oferecendo uma melhor acessibilidade para **jogadores canhotos**.</li>
+</ul>
+
+Além dos botões de movimento, haverá também um ícone de mochila fixado no lado esquerdo da tela, centralizado verticalmente. Esse ícone será utilizado para abrir o inventário do jogador.
+
+<ul>
+    <li>**Função do ícone de mochila:** Ao ser tocado, abrirá o menu de inventário, permitindo ao jogador visualizar e gerenciar seus itens, equipamentos ou recursos.</li>
+</ul>
+
+### Botão de Interação 
+
+O botão de interação será representado por um ícone de mão branca flutuante, que aparecerá acima dos objetos interativos próximos ao jogador.
+
+<ul>
+  <li>**Quando aparece:**  o ícone surge apenas quando o personagem estiver próximo de um objeto que pode ser acionado, como portas, máquinas, reagentes coletáveis.</li>
+  <li>**Posição:** o ícone fica acoplado diretamente ao objeto, flutuando levemente acima dele, sem ocupar espaço na HUD.</li>
+  <li>**Interação:** ao tocar no ícone, o jogador executa a ação correspondente (abrir, ativar, examinar, etc.).</li>
+  <li>**Desaparecimento:** após a ação, o ícone desaparece até que o jogador se aproxima novamente de outro objeto interativo.</li>
+  <li>**Visual:** o ícone será uma mão com dedo indicador levantado, terá estilo simples, em pixel art branca, podendo conter uma animação sutil de flutuar ou pulsar para chamar atenção sem poluir a interface.</li>
+</ul>
+
+### WireFrame
+
+**Inventário (ícone de mochila):** botão fixado na lateral da tela que permite ao jogador acessar seus reagentes e ferramentas de laboratório coletadas durante a exploração.
+
+**Botões de movimento (setas direcionais):** posicionados na parte inferior da tela, permitem que o personagem se desloque para a esquerda ou direita. Otimizados para dispositivos móveis.
+
+
+**Personagem principal:** figura central controlada pelo jogador, responsável por interagir com o ambiente, resolver puzzles e progredir na narrativa.
+
+
+**Botão de interação (ícone de mão):** elemento visual que surge quando o personagem se aproxima de objetos interativos. Permite acionar máquinas, coletar reagentes, abrir portas, entre outros.
+
+
+**Objeto interativo:** elementos do cenário que representam desafios ou perigos químicos, como vazamentos de substâncias, resíduos tóxicos ou mecanismos laboratoriais a serem manipulados.
+
+## Sistema de Movimentação e Física
+
+<ul>
+    <li>Física 2D baseada em KinematicBody2D</li>
+    <li>Ajuste de aceleração, pulo e arrasto</li>
+    <li>Objetos empurráveis</li>
+</ul>
+
+O jogo utiliza uma física 2D otimizada para a movimentação dos personagens, baseada em KinematicBody2D. Isso garante um controle responsivo, com ajustes precisos de aceleração, pulo e arrasto para uma experiência de jogo fluida. Além disso, o sistema permite a interação com objetos empurráveis, adicionando profundidade aos puzzles e à exploração do ambiente.
+
+## Arte e Estilo Visual
+
+### Cores do Jogo
+
+#### Laboratório
+* Cinza claro azulado
+* Rosa queimado / Coral avermelhado
+* Verde petróleo / Verde azulado forte
+* Azul claro acinzentado
+* Bege claro / Areia suave
+* Bege médio / Caramelo claro
+* Verde limão suave / Verde maçã
+* Cinza claro neutro
+* Branco
+* Azul royal / Azul vibrante
+* Laranja queimado / Laranja forte
+* Verde água / Verde oceano
+* Roxo médio / Lavanda escura
+* Cinza muito claro / Off-white
+* Verde-limão pastel / Verde ervilha clara
+
+#### Corredores
+* Amarelo claro pastel / Baunilha suave
+* Laranja pêssego / Coral claro
+* Azul acinzentado / Verde-acinzentado frio
+* Cinza amarelado / Bege acinzentado
+* Cinza claro quente / Bege claro acinzentado
+
+#### Personagens
+* Terra amarela
+* Leão
+* Feijão preto
+* Campo monótono
+* Marrom dourado
+* Cinza claro
+* Verde escuro
+* Azul petróleo
+
+#### Estética
+* Pixel art com sombras suaves e brilhos simulados
+
+#### Animações e partículas
+
+* Vapor, água pingando, choque elétrico
+* Falhas de luz, cintilação, poeira caindo
+
+### Fixados
+(imagens fixadas)
+
+#### Concept Arts
+
+Criações iniciais em estilo pixel art detalhado para definir a aparência dos personagens, cenários, objetos e elementos do laboratório. Estas artes servem como base para modelagem dos sprites e para guiar o estilo geral do jogo. Devem transmitir a atmosfera tensa e tecnológica do ambiente, com foco em realismo simplificado.(FUTURO)
+
+#### Sprites
+
+Personagens e objetos animados em pixel art, com movimentos suaves e expressivos. O protagonista Álvaro terá animações para andar, correr, interagir, usar ferramentas e reagir ao ambiente. Elementos ambientais, como máquinas, painéis e equipamentos de laboratório, terão sprites animados para indicar funcionamento, falhas ou perigos.(FUTURO)
+
+#### Personagens
+Design focado em realismo moderado, com roupas e acessórios típicos de laboratório (jaleco, óculos de proteção, mochila). Animações sutis de respiração e movimentos para transmitir tensão e foco.(FUTURO)
+
+#### Cenários
+Ambientes dos prédios detalhados com texturas pixel art de concreto, metal enferrujado, vidros quebrados e fuligem. Salas laboratoriais terão bancadas, tubos, equipamentos, painéis eletrônicos e recipientes químicos. A iluminação será dinâmica, com sombras e efeitos de luz volumétrica simulando alarmes piscando e falhas elétricas.(FUTURO)
+Objetos
+Itens colecionáveis e interativos terão sprites específicos e detalhes visuais que comuniquem função e estado (ex: frascos com líquidos coloridos, válvulas com indicadores de pressão, ferramentas de laboratório).(FUTURO)
+
+#### Identidade Visual
+Paleta de cores baseada em verdes químicos, cinzas industriais e vermelhos de alerta para criar contraste e urgência. Fontes pixel art legíveis e ícones minimalistas para interface e HUD, mantendo clareza sem poluir a tela.(FUTURO)
+
+#### Efeitos Visuais
+Partículas de vapor, fumaça (com variações de cor conforme reação química), faíscas, gotas de líquidos e brilhos suaves para indicar funcionamento ou perigo.(FUTURO)
+
+#### Animações
+Movimentos dos personagens, interações como manipular reagentes e abrir portas. Animações ambientais para máquinas em funcionamento, alarmes piscando, portas se abrindo e fechando, além de eventos de falhas (faíscas, fumaça). (FUTURO)
+
+## Som e Ambientação
+
+### Trilha sonora
+
+* Sintetizadores suaves e tensos
+* Sons ambientes contínuos (alarme, pingos, estalos)
+
+### Efeitos 
+
+* Combinações químicas
+* Explosões localizadas
+* Eco e reverberação
+
+### Vozes
+
+* Apenas nas cutscenes
+* Opção de legenda ativada por padrão

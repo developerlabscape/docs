@@ -1,97 +1,58 @@
 ---
-title: "Introduction"
-description: "Welcome to the new home for your documentation"
+title: "Introdução"
+description: "A Coca-Cola tem uma longa história de slogans, que refletem a evolução da marca e as suas estratégias de marketing."
+icon: "handshake"
+mode: "custom"
 ---
 
-## Setting up
+export const HeroCard = ({ filename, title, description, href }) => {
+  return (
+    <a className="group cursor-pointer pb-8" href={href}>
+      <img src={`https://mintlify.s3.us-west-1.amazonaws.com/mintlify/images/hero/${filename}.png`} className="block dark:hidden pointer-events-none group-hover:scale-105 transition-all duration-100" />
+      <img src={`https://mintlify.s3.us-west-1.amazonaws.com/mintlify/images/hero/${filename}-dark.png`} className="pointer-events-none group-hover:scale-105 transition-all duration-100 hidden dark:block" />
+      <h3 className="mt-5 text-gray-900 dark:text-zinc-50 font-medium">{title}</h3>
+      <span className="mt-1.5">
+        {description}
+      </span>
+    </a>
+  )
+}
 
-Get your documentation site up and running in minutes.
+<div className="relative">
+<div className="absolute top-0 lg:-top-16 left-0 right-0">
+<img
+  src="/images/hero/background-light.png"
+  className="block dark:hidden pointer-events-none"
+/>
+<img
+  src="/images/hero/background-dark.png"
+  className="hidden dark:block pointer-events-none"
+/>
 
-<Card
-  title="Start here"
-  icon="rocket"
-  href="/quickstart"
-  horizontal
->
-  Follow our three step quickstart guide.
-</Card>
+</div>
 
-## Make it yours
+<div className="px-4 py-16 lg:py-48 lg:pb-24 max-w-3xl mx-auto">
+<h1 className="text-4xl font-medium text-center text-gray-900 dark:text-zinc-50 tracking-tight">
+  LabEscape™
 
-Design a docs site that looks great and empowers your users.
+</h1>
 
-<Columns cols={2}>
-  <Card
-    title="Edit locally"
-    icon="pen-to-square"
-    href="/development"
-  >
-    Edit your docs locally and preview them in real time.
-  </Card>
-  <Card
-    title="Customize your site"
-    icon="palette"
-    href="/essentials/settings"
-  >
-    Customize the design and colors of your site to match your brand.
-  </Card>
-    <Card
-    title="Set up navigation"
-    icon="map"
-    href="/essentials/navigation"
-  >
-    Organize your docs to help users find what they need and succeed with your product.
-  </Card>
-  <Card
-    title="API documentation"
-    icon="terminal"
-    href="/api-reference/introduction"
-  >
-    Auto-generate API documentation from OpenAPI specifications.
-  </Card>
-</Columns>
+<p className="max-w-xl mx-auto px-4 mt-4 text-lg text-center text-gray-500 dark:text-zinc-500">
+  LabEscape™ é um jogo educacional, com profundidade visual, mecânica e design dignos de um jogo comercial, respeitando as limitações de hardware e orçamento.
+</p>
 
-## Create beautiful pages
+<div className="px-6 lg:px-0 mt-12 lg:mt-24 grid sm:grid-cols-2 gap-x-6 gap-y-4">
+<HeroCard filename="rocket" title="Start" description="Conheça os principais elementos e conceitos do jogo que definem a experiência única oferecida." href="/quickstart" />
 
-Everything you need to create world-class documentation.
+<HeroCard filename="cli" title="Instalação" description="Experimente o LabEscape™ agora mesmo" href="/installation" />
 
-<Columns cols={2}>
-  <Card
-    title="Write with MDX"
-    icon="pen-fancy"
-    href="/essentials/markdown"
-  >
-    Use MDX to style your docs pages.
-  </Card>
-  <Card
-    title="Code samples"
-    icon="code"
-    href="/essentials/code"
-  >
-    Add sample code to demonstrate how to use your product.
-  </Card>
-  <Card
-    title="Images"
-    icon="image"
-    href="/essentials/images"
-  >
-    Display images and other media.
-  </Card>
-  <Card
-    title="Reusable snippets"
-    icon="recycle"
-    href="/essentials/reusable-snippets"
-  >
-    Write once and reuse across your docs.
-  </Card>
-</Columns>
+<HeroCard filename="editor" title="História" description="Explore a narrativa envolvente que dá vida ao LabEscape™" href="/editor" />
+{/* Explore os acontecimentos que moldaram a história do LabEscape™ */}
 
-## Need inspiration?
+<HeroCard filename="components" title="Conteúdo Educacional" description="Compreenda os materiais interativos, dinâmicos e educacionais do LabEscape™" href="/navigation" />
 
-<Card
-  title="See complete examples"
-  icon="stars"
-  href="https://mintlify.com/customers"
->
-  Browse our showcase of exceptional documentation sites.
-</Card>
+</div>
+
+</div>
+
+</div>
