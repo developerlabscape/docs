@@ -44,10 +44,7 @@
               "api-playground/openapi-setup",
               "components/tabs",
               "components/mermaid-diagrams",
-              "api-playground/troubleshooting",
-              "components/panel",
-              "settings/custom-domain",
-              "components/update"
+              "components/panel"
             ]
           }
         ]
