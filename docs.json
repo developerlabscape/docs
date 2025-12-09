@@ -3,6 +3,9 @@
   "theme": "maple",
   "name": "LabEscape™",
   "description": "Documentação completa do LabEscape™ - Plataforma de escape rooms e experiências imersivas. Guias, tutoriais e referências do projeto.",
+  "metadata": {
+    "og:image": "/imagegraph/metaimg.png"
+  },
   "colors": {
     "primary": "#0D9373",
     "light": "#55D799",
